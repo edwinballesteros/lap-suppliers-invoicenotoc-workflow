@@ -41,6 +41,13 @@ if ($.context.approvedOnDate !== "") {
 	
 	sFechaA = sDiaA + "/" + sMesA + "/" + sAnioA;
 }
+
+//$.context.siteDomain = "medifarma-suppliers-approuter.cfapps.us10.hana.ondemand.com"; // ACTUALIZAR DE ACUERDO AL AMBIENTE
+
+
+$.context.inboxTilePortalURL = "https://medifarma-suppliers-approuter.cfapps.us10.hana.ondemand.com/cp.portal/site#WorkflowTask-DisplayMyInbox?expertMode=false&sap-ui-app-id-hint=cross.fnd.fiori.inbox&showAdditionalAttributes=true";
+
+
 $.context.requestedOnDateFormatter = sFecha;
 $.context.approvedOnDateFormatter = sFechaA;
 $.context.CustomTaskTitle = $.context.requestUserData.DISPLAYNAME;

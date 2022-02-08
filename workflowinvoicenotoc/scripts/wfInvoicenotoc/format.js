@@ -48,5 +48,6 @@ if ($.context.approvedOnDate !== "") {
 	
 	sFechaA = sDiaA + "/" + sMesA + "/" + sAnioA;
 }
-
+$.context.DEBUG = $.context.WFUserComment;
+$.context.WFUserComment = $.context.WFUserComment;
 $.context.approvedOnDateFormatter = sFechaA;

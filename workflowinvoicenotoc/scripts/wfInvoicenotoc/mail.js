@@ -32,6 +32,7 @@ if($.context.action === "A"){
 	$.context.status = "R";
 }
 
+$.context.WFUserComment = $.context.WFUserComment;
 $.context.initiatorName = $.context.requestUserData.DISPLAYNAME;
 $.context.mail = $.context.requestUserData.EMAIL;
 $.context.subject = 'Solicitud';

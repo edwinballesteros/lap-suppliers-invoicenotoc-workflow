@@ -37,6 +37,7 @@ for (var i=0; i<mail.length; i++) {
 	mails.push(mail[i].EMAIL);
 }
 
+$.context.mailRequester = $.context.requestUserData.EMAIL;
 $.context.initiatorName = 'Srs. Aprobadores';
 $.context.mail = mails.join();
 $.context.subject = 'Solicitud Pre Registro';
