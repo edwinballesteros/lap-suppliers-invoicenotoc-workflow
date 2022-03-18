@@ -34,12 +34,19 @@ if ($.context.requestedOnDate !== "") {
 }
 
 var sFechaA = "";
+$.context.sLabel = "Fecha Apro.: ";
 if ($.context.approvedOnDate !== "") {
 	var sAnioA = $.context.approvedOnDate.substr(0, 4),
 		sMesA = $.context.approvedOnDate.substr(4, 2),
 		sDiaA = $.context.approvedOnDate.substr(6, 2);
 	
 	sFechaA = sDiaA + "/" + sMesA + "/" + sAnioA;
+} else if ($.context.rejectedOnDate !== "") {
+    var sAnioA = $.context.rejectedOnDate.substr(0, 4);
+    var sMesA = $.context.rejectedOnDate.substr(4, 2);
+    var sDiaA = $.context.rejectedOnDate.substr(6, 2);
+    sFechaA = sDiaA + "/" + sMesA + "/" + sAnioA;
+    $.context.sLabel = "Fecha Rechazo: ";
 }
 
 //$.context.siteDomain = "medifarma-suppliers-approuter.cfapps.us10.hana.ondemand.com"; // ACTUALIZAR DE ACUERDO AL AMBIENTE

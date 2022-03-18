@@ -47,7 +47,9 @@ if ($.context.approvedOnDate !== "") {
 		sDiaA = $.context.approvedOnDate.substr(6, 2);
 	
 	sFechaA = sDiaA + "/" + sMesA + "/" + sAnioA;
+    $.context.sLabel = "Fecha Aprob.: ";
 }
+$.context.CustomObjectAttributeValueVariable = sFechaA;
 $.context.DEBUG = $.context.WFUserComment;
-$.context.WFUserComment = $.context.WFUserComment;
+$.context.reason = $.context.WFUserComment;
 $.context.approvedOnDateFormatter = sFechaA;

@@ -19,7 +19,7 @@
 				"id": "CustomObjectAttributeValue",
 				"label": "CustomObjectAttributeValue",
 				"type": "string",
-				"value": "F. Aprobacion ${context.approvedOnDateFormatter}"
+				"value": "${context.sLabel} ${context.CustomObjectAttributeValueVariable}"
 			}, {
 				"id": "CustomCreatedBy",
 				"label": "CustomCreatedBy",
