@@ -34,12 +34,12 @@
 				"id": "RequestingUser",
 				"label": "RequestingUser",
 				"type": "string",
-				"value": "${context.requestUserData.USERID}"
+				"value": "${context.RequesterUserName}"
 			}, {
 				"id": "LastApprover",
 				"label": "LastApprover",
 				"type": "string",
-				"value": "${context.lastApprover}"
+				"value": "${context.ApproverUserName}"
 			}, {
 				"id": "Status",
 				"label": "StatusText",
