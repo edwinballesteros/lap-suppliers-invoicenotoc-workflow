@@ -16,4 +16,5 @@ if ($.context.approvedOnDate !== "") {
     sFechaA = sDiaA + "/" + sMesA + "/" + sAnioA;
     $.context.sLabel = "Fecha Rechazo: ";
 }
+$.context.reason = $.context.WFUserComment;
 $.context.CustomObjectAttributeValueVariable = sFechaA;
