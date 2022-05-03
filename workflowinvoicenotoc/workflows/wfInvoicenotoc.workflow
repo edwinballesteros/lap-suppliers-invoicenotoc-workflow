@@ -200,7 +200,7 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"supportsForward": false,
-			"userInterface": "sapui5://comeverissuppliersinvoiceregisternotoc/com.everis.suppliers.invoiceregisternotoc",
+			"userInterface": "sapui5://medifarma-apps-suppliers-bs.comeverissuppliersinvoiceregisternotoc/com.everis.suppliers.invoiceregisternotoc",
 			"recipientUsers": "${context.users}",
 			"customAttributes": [{
 				"id": "CustomTaskTitle",
@@ -261,7 +261,7 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"supportsForward": false,
-			"userInterface": "sapui5://comeverissuppliersinvoiceregisternotoc/com.everis.suppliers.invoiceregisternotoc",
+			"userInterface": "sapui5://medifarma-apps-suppliers-bs.comeverissuppliersinvoiceregisternotoc/com.everis.suppliers.invoiceregisternotoc",
 			"recipientUsers": "${context.requestUserData.USERID}",
 			"customAttributes": [{
 				"id": "CustomTaskTitle",
