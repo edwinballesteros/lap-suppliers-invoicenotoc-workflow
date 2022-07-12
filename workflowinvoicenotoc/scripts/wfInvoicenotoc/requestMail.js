@@ -25,7 +25,9 @@ var product = {
 $.context.product = product;
 */
 var mail = $.context.approverUsersData,
-	mails = [];
+    mailDest = $.context.MailDest,
+	mails = [],
+    mailAddressForCC = [];
 
 if($.context.action === "R"){
 	$.context.body = "Se volvió a enviar la solicitud de pre registo:";
@@ -37,8 +39,13 @@ for (var i=0; i<mail.length; i++) {
 	mails.push(mail[i].EMAIL);
 }
 
+for (var i=0; i<mailDest.length; i++) {
+	mailAddressForCC.push(mailDest[i].MAILDEST);
+}
+
 $.context.mailRequesterName = $.context.requestUserData.DISPLAYNAME;
 $.context.mailRequester = $.context.requestUserData.EMAIL;
 $.context.initiatorName = 'Srs. Aprobadores';
-$.context.mail = mails.join();
+$.context.mail = mails.join(',');
+$.context.mailAddressForCC = mailAddressForCC.join(',');
 $.context.subject = 'Solicitud Pre Registro';

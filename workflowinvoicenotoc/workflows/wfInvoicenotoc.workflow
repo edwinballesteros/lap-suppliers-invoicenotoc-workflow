@@ -719,6 +719,7 @@
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition1",
 			"to": "${context.mail}",
+			"cc": "${context.mailAddressForCC}",
 			"subject": "${context.subject}",
 			"reference": "/webcontent/wfInvoicenotoc/mailSolicitud.html",
 			"id": "maildefinition1"
