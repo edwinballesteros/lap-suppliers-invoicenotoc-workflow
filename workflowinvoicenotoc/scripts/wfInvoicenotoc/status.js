@@ -25,5 +25,4 @@ var product = {
 $.context.product = product;
 */
 $.context.status = "T";
-$.context.WFUserComment = $.context.WFUserComment;
 $.context.CustomNumberValue = $.context.prnRequestData.RUC;
