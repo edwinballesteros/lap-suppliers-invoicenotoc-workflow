@@ -35,3 +35,29 @@ if($.context.action === "A"){
 $.context.initiatorName = $.context.requestUserData.DISPLAYNAME;
 $.context.mail = $.context.requestUserData.EMAIL;
 $.context.subject = 'Solicitud';
+
+// formatear monto
+var monto = $.context.prnRequestData.AMOUNT;
+var montoFormateado = monto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+var aPartesMonto = montoFormateado.split('.');
+
+if (aPartesMonto.length > 1) {
+    montoFormateado = aPartesMonto[0] + '.' + (aPartesMonto[1].length === 1 ? (aPartesMonto[1] + '0') : aPartesMonto[1]);
+} else {
+    montoFormateado = montoFormateado + '.00';
+}
+
+// añadir moneda
+switch ($.context.prnRequestData.CURRENCY) {
+    case 'PEN':
+        montoFormateado = 'S/. ' + montoFormateado;
+        break;
+    case 'USD':
+        montoFormateado = '$ ' + montoFormateado;
+        break;
+    case 'EUR':
+        montoFormateado = '€ ' + montoFormateado;
+        break;
+}
+
+$.context.montoFormateado = montoFormateado;
