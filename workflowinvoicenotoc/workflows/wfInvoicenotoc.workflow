@@ -184,6 +184,7 @@
 		},
 		"e6daddb5-fe78-4c11-a55f-ec4474600568": {
 			"classDefinition": "com.sap.bpm.wfs.MailTask",
+			"destinationSource": "consumer",
 			"id": "mailtask1",
 			"name": "Envio de Solicitud",
 			"mailDefinitionRef": "898ad944-1f2e-4e0c-bcd0-d09852f3a690"
@@ -200,7 +201,7 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"supportsForward": false,
-			"userInterface": "sapui5://medifarma-apps-suppliers-bs.comeverissuppliersinvoiceregisternotoc/com.everis.suppliers.invoiceregisternotoc",
+			"userInterface": "sapui5://lap-apps-suppliers-bs.comeverissuppliersinvoiceregisternotoc/com.everis.suppliers.invoiceregisternotoc",
 			"recipientUsers": "${context.users}",
 			"customAttributes": [{
 				"id": "CustomTaskTitle",
@@ -245,6 +246,7 @@
 		},
 		"019d9d34-c7a3-4794-b542-10178d0b8066": {
 			"classDefinition": "com.sap.bpm.wfs.MailTask",
+			"destinationSource": "consumer",
 			"id": "mailtask2",
 			"name": "correo Aprobacion",
 			"mailDefinitionRef": "9170506c-c36e-4d47-b47d-346699c1c1ac"
@@ -261,7 +263,7 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"supportsForward": false,
-			"userInterface": "sapui5://medifarma-apps-suppliers-bs.comeverissuppliersinvoiceregisternotoc/com.everis.suppliers.invoiceregisternotoc",
+			"userInterface": "sapui5://lap-apps-suppliers-bs.comeverissuppliersinvoiceregisternotoc/com.everis.suppliers.invoiceregisternotoc",
 			"recipientUsers": "${context.requestUserData.USERID}",
 			"customAttributes": [{
 				"id": "CustomTaskTitle",
@@ -300,6 +302,7 @@
 		},
 		"104cb63d-98a3-4a54-a55b-7ce3c8fbb432": {
 			"classDefinition": "com.sap.bpm.wfs.MailTask",
+			"destinationSource": "consumer",
 			"id": "mailtask3",
 			"name": "Envio de Correo",
 			"mailDefinitionRef": "7d75ec19-7e6d-4f81-8a3a-e3b139e409d1"
@@ -312,6 +315,7 @@
 		},
 		"eb998a37-bf50-4566-a532-b14950ce16b8": {
 			"classDefinition": "com.sap.bpm.wfs.MailTask",
+			"destinationSource": "consumer",
 			"id": "mailtask4",
 			"name": "correo Rechazo",
 			"mailDefinitionRef": "5196df8d-92d3-45f9-8be1-1f1ce66b74f3"
@@ -719,7 +723,7 @@
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition1",
 			"to": "${context.mail}",
-			"cc": "${context.mailAddressForCC}",
+			"cc": "",
 			"subject": "${context.subject}",
 			"reference": "/webcontent/wfInvoicenotoc/mailSolicitud.html",
 			"id": "maildefinition1"
