@@ -16,15 +16,19 @@
         </style>
     </head>
     <body>
-        <p>La presente es para informarle que el usuario RECHAZO la solicitud de aprobacion del siguiente comprobante:</p>
-        <p>El motivo de rechazo:</p>
+        <p>Estimado(a)</p>
+        <p>La presente es para informarle que el siguiente comprobante fue rechazado:</p>
+        <p>El motivo de rechazo es :</p>
         <p>${context.WFUserComment}</p>
+        <b>Usuario Rechaza: </b> ${context.users}<br>
         <b>Doc. Proveedor   :  </b>  ${context.CustomNumberValue} <br>
         <b>Razon Social     :  </b>  ${context.mailRequesterName} <br>
         <b>Nro Comprobante  :  </b>  ${context.prnRequestData.VOUCHERNUMBER} <br>
         <b>Fecha Emision    :  </b>  ${context.prnRequestData.INVOICEDATE}<br>
-    <p> <b>Por favor tomar las medidad necesarias para redireccionar correctamente el comprobante.</b> </p>
+        <b>Fecha Solicitud de Visto: </b> ${context.prnRequestData.REQUESTDATE}<br>
+        <b>Monto Aprobado: </b> ${context.montoFormateado}<br>
+   <!-- <p> <b>Por favor tomar las medidad necesarias para redireccionar correctamente el comprobante.</b> </p>-->
 
-   <p>MEDIFARMA S.A</p>
+         <p>Contabilidad</p>
 </body>
 </html>

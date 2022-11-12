@@ -50,9 +50,11 @@ if ($.context.approvedOnDate !== "") {
 }
 
 // DEV
-$.context.inboxTilePortalURL = 'https://medifarmadevqas.cpp.cfapps.us10.hana.ondemand.com/site?siteId=ced24468-2ef5-42c3-8f85-f444f1bb5b8b&sap-language=default#WorkflowTask-DisplayMyInbox?sap-ui-app-id-hint=920f6035-7da5-4781-bdff-8a02fa654698';
+$.context.inboxTilePortalURL = $.context.URLPortal + '&sap-language=default#WorkflowTask-DisplayMyInbox?sap-ui-app-id-hint=920f6035-7da5-4781-bdff-8a02fa654698';
 // QAS
 // $.context.inboxTilePortalURL = 'https://medifarmaqas.cpp.cfapps.us10.hana.ondemand.com/site?siteId=ced24468-2ef5-42c3-8f85-f444f1bb5b8b&sap-language=default#WorkflowTask-DisplayMyInbox?sap-ui-app-id-hint=920f6035-7da5-4781-bdff-8a02fa654698';
+
+
 
 $.context.requestedOnDateFormatter = sFecha;
 $.context.approvedOnDateFormatter = sFechaA;
@@ -63,3 +65,32 @@ $.context.CustomObjectStatus = "";
 $.context.CustomNumberValue = $.context.prnRequestData.RUC;
 $.context.CustomNumberUnitValue = "";
 $.context.status = "P";
+
+
+
+
+// formatear monto
+var monto = $.context.prnRequestData.AMOUNT;
+var montoFormateado = monto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+var aPartesMonto = montoFormateado.split('.');
+
+if (aPartesMonto.length > 1) {
+    montoFormateado = aPartesMonto[0] + '.' + (aPartesMonto[1].length === 1 ? (aPartesMonto[1] + '0') : aPartesMonto[1]);
+} else {
+    montoFormateado = montoFormateado + '.00';
+}
+
+// añadir moneda
+switch ($.context.prnRequestData.CURRENCY) {
+    case 'PEN':
+        montoFormateado = 'S/. ' + montoFormateado;
+        break;
+    case 'USD':
+        montoFormateado = '$ ' + montoFormateado;
+        break;
+    case 'EUR':
+        montoFormateado = '€ ' + montoFormateado;
+        break;
+}
+
+$.context.montoFormateado = montoFormateado;

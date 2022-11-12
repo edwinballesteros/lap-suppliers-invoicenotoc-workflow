@@ -16,10 +16,12 @@
         </style>
     </head>
     <body>
+        <p>Estimado(a)</p>
+        
         <p>La presente es para informarle que el siguiente comprobante fue aprobado:</p>
        
         <b>Usuario Aprueba: </b> ${context.users}<br>
-        <b>Cargo: </b> ${context.Cargo}<br>
+        <!--<b>Cargo: </b> ${context.Cargo}<br>-->
         <b>Doc. Proveedor: </b> ${context.CustomNumberValue}<br>
         <b>Razón Social: </b> ${context.mailRequesterName}<br>
         <b>Nro. Comprobante: </b> ${context.prnRequestData.VOUCHERNUMBER}<br>
@@ -27,6 +29,6 @@
         <b>Fecha Solicitud de Visto: </b> ${context.prnRequestData.REQUESTDATE}<br>
         <b>Monto Aprobado: </b> ${context.montoFormateado}<br>
 
-   <p>MEDIFARMA S.A</p>
+        <p>Contabilidad</p>
 </body>
 </html>

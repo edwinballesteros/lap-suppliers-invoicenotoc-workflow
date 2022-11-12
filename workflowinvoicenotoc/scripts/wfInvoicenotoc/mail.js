@@ -24,17 +24,20 @@ var product = {
 // write 'product' node to workflow context
 $.context.product = product;
 */
+$.context.subject = 'Solicitud';
 if($.context.action === "A"){
 	$.context.body = "Se aprobó la solicitud:";
 	$.context.status = "A";
+    $.context.subject = 'SOLICITUD APROBADA';
 }else if($.context.action === "R"){
 	$.context.body = "Se rechazó la solicitud:";
 	$.context.status = "R";
+    $.context.subject = 'SOLICITUD RECHAZADA';
 }
 
 $.context.initiatorName = $.context.requestUserData.DISPLAYNAME;
 $.context.mail = $.context.requestUserData.EMAIL;
-$.context.subject = 'Solicitud';
+
 
 // formatear monto
 var monto = $.context.prnRequestData.AMOUNT;
