@@ -50,11 +50,13 @@ if ($.context.approvedOnDate !== "") {
 }
 
 // DEV
-$.context.inboxTilePortalURL = $.context.URLPortal + '&sap-language=default#WorkflowTask-DisplayMyInbox?sap-ui-app-id-hint=920f6035-7da5-4781-bdff-8a02fa654698';
+//$.context.inboxTilePortalURL = $.context.URLPortal + '&sap-language=default#WorkflowTask-DisplayMyInbox?sap-ui-app-id-hint=920f6035-7da5-4781-bdff-8a02fa654698';
 // QAS
 // $.context.inboxTilePortalURL = 'https://medifarmaqas.cpp.cfapps.us10.hana.ondemand.com/site?siteId=ced24468-2ef5-42c3-8f85-f444f1bb5b8b&sap-language=default#WorkflowTask-DisplayMyInbox?sap-ui-app-id-hint=920f6035-7da5-4781-bdff-8a02fa654698';
-
-
+// PRD
+$.context.URLPortal = 'https://lap-prd-fagjk4dv.launchpad.cfapps.br10.hana.ondemand.com/site?siteId=6bd49551-02e0-426d-9285-5d9d1d474741';
+$.context.inboxTilePortalURL = 'https://lap-prd-fagjk4dv.launchpad.cfapps.br10.hana.ondemand.com/site?siteId=6bd49551-02e0-426d-9285-5d9d1d474741&sap-language=es-ES#WorkflowTask-DisplayMyInbox?sap-ui-app-id-hint=saas_approuter_cross.fnd.fiori.inbox';
+$.context.URLSharePoint = 'https://lapperu.sharepoint.com/sites/s4hana/Proveedores/Forms/AllItems.aspx?newTargetListUrl=%2Fsites%2Fs4hana%2FProveedores&viewpath=%2Fsites%2Fs4hana%2FProveedores%2FForms%2FAllItems%2Easpx&id=%2Fsites%2Fs4hana%2FProveedores%2FPRD%2FINVOICEREGISTERNOTOC&viewid=45a75a0c%2De19b%2D4091%2D8735%2Da9b9cc18440e';
 
 $.context.requestedOnDateFormatter = sFecha;
 $.context.approvedOnDateFormatter = sFechaA;
